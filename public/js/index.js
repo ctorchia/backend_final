@@ -39,7 +39,7 @@ const addMessage = (evt) => {
     return false;
 }
 
-const PORT = 8080
+// const PORT = 8080
 
 const socket = io().connect()     
 
@@ -58,7 +58,7 @@ let emailId = email.innerHTML
 getProductsCart = async () => {
     
     console.log("Info en Front:",emailId);
-    await fetch(`http://localhost:${PORT}/carrito/${emailId}`)
+    await fetch(`https://vacuous-temper-production.up.railway.app/carrito/${emailId}`)
         .then(res => res.json())
         .then(data => {
             console.log("Esto vuelve del server:", data);
@@ -101,7 +101,7 @@ sendOrder.addEventListener('click', async () => {
         }),
     };
 
-    fetch(`http://localhost:${PORT}/ordenes`, requestOptions)
+    fetch(`https://vacuous-temper-production.up.railway.app/ordenes`, requestOptions)
         .then(res => res.json())
         .then(data => {
             let html = `
@@ -118,7 +118,7 @@ sendOrder.addEventListener('click', async () => {
 const logoutButton = document.getElementById('logoutButton')
 
 logoutButton.addEventListener('click', () => {
-    fetch(`http://localhost:${PORT}/logout`)
+    fetch(`https://vacuous-temper-production.up.railway.app/logout`)
         .then(res => res.json())
         .then(data => {
             let html = `
