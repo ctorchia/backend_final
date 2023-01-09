@@ -1,5 +1,5 @@
 const ContainerMongoDb = require('../../containers/containerMongoDb')
-const Orders = require('../../mongoDB/models/orders.model') // 1
+const Orders = require('../../mongodb/models/orders.model') // 1
 
 class OrdersDaoMongoDb extends ContainerMongoDb {
     constructor() {
