@@ -1,4 +1,4 @@
-const connectDB = require('../mongoDb/connection') 
+const connectDB = require('../mongodb/connection.js') 
 connectDB()
 
 class ContainerMongoDb {
