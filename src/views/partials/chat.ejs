@@ -1,0 +1,30 @@
+<!-- Chat -->
+
+<div class="container col-8 align-self-center border mt-3 bg-light p-3">
+    <h2 class="text-center">Centro de Mensajes:</h2>
+    <h3 class="text-center" id="ratio"></h3>
+    
+    <form onsubmit="return addMessage(this)" class="mt-5">
+        <div class="mb-3">
+            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+        </div>
+
+        <div class="container col-12">
+            <table class="table">
+                <tbody id="messagesChat">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="mb-3 d-flex align-items-center">
+            <div class="col-10">
+                <input type="text" class="form-control" id="text" name="text" placeholder="Ingrese su mensaje..."
+                    required>
+            </div>
+            <div class="col-2 ml-2 text-center">
+                <input type="submit" value="Enviar">
+            </div>
+        </div>
+    </form>
+</div>
